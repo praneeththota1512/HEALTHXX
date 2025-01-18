@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="https://img.icons8.com/ios/50/ffffff/hospital-room.png" alt="Hospital Icon" class="hospital-icon">
+                HealthX
+            </div>
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+                <a href="#profile" class="profile-icon">
+                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/user--v1.png" alt="Profile Icon">
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Making Health Care Better Together</h1>
+            <p>Your health is our priority. We provide high-quality healthcare services to ensure your well-being.</p>
+            <div class="buttons">
+                <a href="#appointment" class="btn-primary">Make an Appointment</a>
+                <a href="#services" class="btn-secondary">View Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-section">
+        <h2>Check Your Symptoms or Upload Image</h2>
+        <p>Enter your symptoms or upload an image to detect potential conditions.</p>
+        <div class="search-and-upload">
+            <input type="text" id="symptom-input" placeholder="Enter symptoms (e.g., headache, fever)" oninput="suggestSymptoms()">
+            <button class="btn-primary" onclick="searchDisease()">Search</button>
+            <button class="btn-upload" onclick="document.getElementById('file-upload').click()">Upload Image</button>
+            <input type="file" id="file-upload" accept="image/*" style="display: none;" onchange="analyzeImage(event)">
+        </div>
+        <div id="suggestions" class="suggestions-list"></div>
+        <div id="result" class="result"></div>
+    </section>
+
+    <section class="services">
+        <div class="service">
+            <h3>Primary Care</h3>
+            <p>Comprehensive care for all ages and stages of life.</p>
+        </div>
+        <div class="service">
+            <h3>Emergency Cases</h3>
+            <p>Immediate assistance for urgent health situations.</p>
+        </div>
+        <div class="service">
+            <h3>Online Appointment</h3>
+            <p>Schedule your appointment online for convenience.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Medcare Health Solution. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
